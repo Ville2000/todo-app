@@ -1,0 +1,28 @@
+<p><a href="#/addCollection">Add a new List</a></p>
+
+<h1>ToDo Lists</h1>
+
+<div ng-app="">
+    <div ng-controller="getCollections">
+        <table class="pure-table ">
+            <thead>
+                <tr>
+                    <th>Name
+                        <input type="button" ng-click="sortByName()" value="Sort" />
+                    </th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="collection in collections">
+                    <td>
+                        <a href="#/viewDocuments" data-ng-click="toDocuments(collection.name)">{{ collection.name }}</a>
+                    </td>
+                    <td>
+                        <input type="button" ng-click="dropCollection(collection.name)" value="Delete" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

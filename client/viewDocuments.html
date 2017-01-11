@@ -1,0 +1,34 @@
+<p><a href="#/addDocument">Add a new Item</a></p>
+
+<h1>Items of a List</h1>
+
+<div ng-app="myApp">
+    <div ng-controller="getDocuments">
+        <table class="pure-table ">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name <input type="button" ng-click="sortByName()" value="Sort" /></th>
+                    <th>Priority <input type="button" ng-click="sortByPriority()" value="Sort" /></th>
+                    <th>Status <input type="button" ng-click="sortByStatus()" value="Sort" /></th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="document in documents">
+                    <td>{{ document.id }}
+                    </td>
+                    <td>{{ document.name }}
+                    </td>
+                    <td>{{ document.priority }}
+                    </td>
+                    <td><a href="#/viewDocuments" data-ng-click="changeStatus(document.id)">{{ document.status }}</a>
+                    </td>
+                    <td><input type="button" ng-click="deleteDocument(document.id)" value="Delete" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p><a href="#/">To Lists</a></p>

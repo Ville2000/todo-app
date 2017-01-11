@@ -1,0 +1,16 @@
+<p><a href="#/viewDocuments">To Items</a></p>
+
+<h1>New Item</h1>
+
+<div data-ng-controller="addDocument">
+    <form>
+        <label>Name</label>
+        <input type="text" name="name" ng-model="newDoc.name" />
+        <br/>
+        <label>Priority</label>
+        <input type="text" name="priority" ng-model="newDoc.priority" />
+        <br/>
+        <input type="button" ng-click="addDocument()" value="Add Document" />
+    </form>
+
+</div>

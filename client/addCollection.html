@@ -1,0 +1,14 @@
+<p><a href="#/">To Lists</a></p>
+
+<h1>New List</h1>
+
+<div data-ng-controller="addCollection">
+    <form>
+        <p>
+            <label>Give your Collection a name:</label>
+        </p>
+        <input type="text" name="name" ng-model="newCollection.name" />
+        <p>
+            <input type="button" ng-click="addCollection()" value="Add Collection" />
+    </form>
+</div>
